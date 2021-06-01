@@ -1,0 +1,21 @@
+/*Realizar un programa que en la función loop muestre solamente 
+un cartel cada 1 segundo que diga "Funcionamiento OK.".
+Cuando se ingrese la palabra "hola", el programa debe mostral 
+el cartel "full picado pa.". */
+
+
+void setup(){
+  Serial.begin(9600);
+}
+
+void loop(){
+  Serial.println("Funcionamineto OK");
+  delay(1000);
+}
+
+void serialEvent() {
+  String lectura = Serial.readString();
+  if (lectura.equals("hola")) {
+    Serial.println("full picado pa");
+  }
+}
