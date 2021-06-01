@@ -1,0 +1,15 @@
+/*Teniendo la función loop() vacía, cuando se ingresen datos, 
+se deberá mostrar por el puerto serial la cantidad de caracteres
+ingresados.*/
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {}
+
+void serialEvent(){ 
+  String lectura = Serial.readString(); 
+  Serial.print(" cantidad de datos ingresados: ");
+  Serial.print(lectura.length());
+}
