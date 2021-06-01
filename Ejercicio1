@@ -1,0 +1,14 @@
+/*Cuando ingrese algún dato al puerto serial, este deberá 
+devolver un cartel que diga "se ingresaron datos". 
+La función loop() debe estar vacía.*/
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {}
+
+void serialEvent(){  
+ Serial.println("Se ingresaron datos");
+  char c = Serial.read();
+}
